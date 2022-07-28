@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "4a30d419-7b0a-43c4-8e62-22633c42bf4e",
+		"name": "Book App - DynamoDB Flask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create an entry",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1008,\n    \"title\": \"title1\",\n    \"description\": \"description1\",\n    \"author\": \"author1\",\n    \"publisher\": \"publisher1\",\n    \"year\": \"year1\",\n    \"isbn\": \"ISBN\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Table",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1005,\n    \"title\": \"Mysterious Affair at Styles\",\n    \"author\": \"Agatha Christie\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/createTable",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"createTable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read an entry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/book/1008",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"book",
+						"1008"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update the entry",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"author\": \"author\",\n    \"description\": \"description\",\n    \"isbn\": \"ISBN\",\n    \"publisher\": \"publisher\",\n    \"title\": \"title\",\n    \"year\": \"year\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/book/1008",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"book",
+						"1008"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an entry",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/book/1008",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"book",
+						"1008"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
