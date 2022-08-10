@@ -20,7 +20,7 @@
 
 ### View Table
 
-> aws dynamodb scan --table-name NameOfTheTableToBeScanned
+> aws dynamodb scan --table-name Book --endpoint-url http://localhost:8000
 
 ### Delete Table
 
@@ -51,4 +51,5 @@
 * https://aws.amazon.com/dynamodb/
 * https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html
 * https://awsclibuilder.com/home/services/dynamodb
+* https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html
 * https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html
