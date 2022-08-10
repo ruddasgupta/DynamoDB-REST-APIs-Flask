@@ -64,7 +64,7 @@ def update_book(id):
 
 @app.route('/upvote/book/<int:id>', methods=['POST'])
 def upvote_book(id):
-    response = dynamodb.upvote_a_bookBook(id)
+    response = dynamodb.upvote_a_book(id)
     if (response['ResponseMetadata']['HTTPStatusCode'] == 200):
         return {
             'msg'      : 'Upvotes the book successfully',
